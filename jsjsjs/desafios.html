@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Image & RGB Text</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .spinning-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .rgb-text {
+            position: absolute;
+            bottom: 50px;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 0 0 10px white;
+            animation: rgbColor 1s infinite alternate;
+        }
+
+        @keyframes rgbColor {
+            0% { color: red; }
+            33% { color: green; }
+            66% { color: blue; }
+            100% { color: red; }
+        }
+    </style>
+</head>
+<body>
+    <img src="skibidi.jpg" alt="Spinning" class="spinning-image"> 
+    <p class="rgb-text">By Rumano</p>
+</body>
+</html>
