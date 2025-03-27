@@ -3,51 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning Image & RGB Text</title>
+    <title>La Noria de Alcantarilla</title>
     <style>
         body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: black;
-            overflow: hidden;
-            position: relative;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            color: #333;
         }
-
-        .spinning-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            position: absolute;
-            animation: spin 2s linear infinite;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
         }
-
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        img {
+            width: 100%;
+            border-radius: 10px;
         }
-
-        .rgb-text {
-            position: absolute;
-            bottom: 50px;
-            font-size: 32px;
-            font-weight: bold;
-            text-shadow: 0 0 10px white;
-            animation: rgbColor 1s infinite alternate;
-        }
-
-        @keyframes rgbColor {
-            0% { color: red; }
-            33% { color: green; }
-            66% { color: blue; }
-            100% { color: red; }
+        .info {
+            font-size: 20px;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <img src="skibidi.jpg" alt="Spinning" class="spinning-image"> 
-    <p class="rgb-text">By Rumano</p>
+    <div class="container">
+        <h1>La Noria de Alcantarilla</h1>
+        <img src="noria.jpg" alt="Imagen de la Noria de Alcantarilla">
+        <p class="info">La Noria de Alcantarilla es muy antigua. Se usa para sacar agua del río.</p>
+        <p class="info">Está en un parque bonito donde se puede pasear.</p>
+        <p class="info">Funciona con la fuerza del agua y gira lentamente.</p>
+    </div>
 </body>
 </html>
